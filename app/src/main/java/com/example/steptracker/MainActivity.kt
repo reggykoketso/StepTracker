@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
@@ -12,18 +13,25 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.modifier.modifierLocalMapOf
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.steptracker.ui.theme.StepTrackerTheme
+import kotlin.system.exitProcess
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
 
-          Column {
+          Column(
+                  modifier = Modifier.fillMaxSize(),
+                  verticalArrangement = Arrangement.Center,
+                  horizontalAlignment = Alignment.CenterHorizontally,
+              ){
+
               Text(text = "Step Tracker")
               Text(text = "Regina Mothiba")
               Text(text = "ST10439241")
@@ -35,12 +43,11 @@ class MainActivity : ComponentActivity() {
                   val nav = Intent(this@MainActivity,MainScreen::class.java)
                   startActivity(nav)
               }) {
-
                   Text(text = "Main")
               }
               Button(onClick = { }) {
-                  System.exit(0)
-                  Text(text = "Exit")
+                  exitProcess(0)
+
                   
               }
                   
@@ -48,9 +55,4 @@ class MainActivity : ComponentActivity() {
           }
     }
 }
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyApplTheme {
-        Greeting("Android")
-    }
+
