@@ -33,9 +33,11 @@ class MainScreen : ComponentActivity() {
             val date: Int,
             val morningSteps: Int,
             val afternoonSteps: Int,
-            val activityNotes: String
+            val activityNotes: String,
+            val dailyActivities: String
         )
-            val dailyActivites = arrayOf(activity( "2024-10-07",2000,3000,"walked to classes and around campus",
+            val dailyActivites = arrayOf(
+                 "2024-10-07",2000,3000,"walked to classes and around campus",
                 "2024-1008",150,6667,"Strolled during study breaks",
                 "2024-10-09",445,765,"Walked around town before and after classes",
                 "2024-10-10",1111,886," Went to the staff room running and back to classes running",
@@ -43,7 +45,7 @@ class MainScreen : ComponentActivity() {
                 "2024-10-12",662,76,"waled from the bus stop to my house",
                 "2024-10-13",443,54," Walked to campus"
                 )
-            )
+
 
 
 
@@ -63,7 +65,7 @@ class MainScreen : ComponentActivity() {
 
             }
             Button(onClick = {
-                val nav = Intent(this@MainScreen, DetailedScreen::class.java)
+                val nav = Intent(this@MainScreen,DetailedScreen::class.java)
                 startActivity(nav)
             })
 
@@ -73,9 +75,8 @@ class MainScreen : ComponentActivity() {
             }
             Button(onClick = { /*TODO*/ }) {
                 Text(text = "Clear")
-
             }
 
-        }
+
 
 

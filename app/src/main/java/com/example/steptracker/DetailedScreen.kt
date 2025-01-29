@@ -2,6 +2,7 @@ package com.example.steptracker
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
@@ -27,6 +28,9 @@ class DetailedScreen : ComponentActivity() {
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
+                
+            }
+            Text(text = "This is the Detailed screen")
 
                 Button(onClick = { /*TODO*/ }) {
                     Text(text = "Highest steps")
@@ -43,3 +47,9 @@ class DetailedScreen : ComponentActivity() {
                 }) {
                     Text(text = "Main")
                 }
+                fun calculateAverage(numbers:List<Double>):Double{return numbers.sum()/ numbers.size}}
+                        Button(onClick = { /*TODO*/ }) {
+                    Text(text = "Average")
+                }
+                    
+                
