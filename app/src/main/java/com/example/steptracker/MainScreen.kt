@@ -29,21 +29,21 @@ class MainScreen : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
 
-        }
-        data class
-            val dates = arrayOf(
-                "2024-10-07",
-                "2024-1008",
-                "2024-10-09",
-                "2024-10-10",
-                "2024-10-11",
-                "2024-10-12",
-                "2024-10-13"
+        data class dailyActivity(
+            val date: Int,
+            val morningSteps: Int,
+            val afternoonSteps: Int,
+            val activityNotes: String
+        )
+            val dailyActivites = arrayOf(activity( "2024-10-07",2000,3000,"walked to classes and around campus",
+                "2024-1008",150,6667,"Strolled during study breaks",
+                "2024-10-09",445,765,"Walked around town before and after classes",
+                "2024-10-10",1111,886," Went to the staff room running and back to classes running",
+                "2024-10-11",453,33,"Accompanied my friends to got to the shops",
+                "2024-10-12",662,76,"waled from the bus stop to my house",
+                "2024-10-13",443,54," Walked to campus"
+                )
             )
-
-            val morningSteps = arrayOf(2000,150,445,1111,453,662,443)
-            val afternoonSteps = arrayOf(3000,6667,765,886,33,76,54)
-            val activityNotes= arrayOf("walked to classes and around campus","Strolled during study breaks","Walked around town before and after classes"," Went to the staff room running and back to classes running","Accompanied my friends to got to the shops","waled from the bus stop to my house")
 
 
 
