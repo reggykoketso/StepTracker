@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Step Tracker</string>
+    <string name="title_activity_main_screen">MainScreen</string>
+    <string name="title_activity_detailed_screen">DetailedScreen</string>
+</resources>
